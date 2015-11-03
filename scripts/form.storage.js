@@ -5,7 +5,7 @@
 
 		function on_change(event) {
 			var input = $(event.target);
-			var key = input.parents('form:first').attr('name');
+			var key = "storedData";
 			var data = JSON.parse(localStorage[key]);
 
 			if(input.attr('type') == 'radio' || input.attr('type') == 'checkbox') {
@@ -26,7 +26,7 @@
 			var element = $(this);
 
 			if(typeof(Storage)!=="undefined"){
-				var key = element.attr('name');
+				var key = "storedData";
 
 				var data = false;
 				if(localStorage[key]) {
@@ -83,7 +83,7 @@
 			var element = $(this);
 
 			if(typeof(Storage)!=="undefined"){
-				var key = element.attr('name');
+				var key = "storedData";
 
 				var data = false;
 				if(localStorage[key]) {
@@ -95,11 +95,9 @@
 					data = JSON.parse(localStorage[key]);
 				}
 
-				element.find('.playback-cell').each(function(){
 					var input = $(this);
 					var value = data[input.attr('data-playback')];
 					input.html(value);
-				});
 
 			}
 			else {
@@ -108,3 +106,13 @@
 		});
 	};
 }( jQuery ))
+
+$( document ).ready(function() {
+	//write to local storage
+	$('form').storeForm();
+	//play back from local storage
+	$('*[data-playback]').getForm();
+	$('.clear-data').click(function(){
+	  localStorage.clear();
+	});
+});

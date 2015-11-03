@@ -23,23 +23,20 @@
 		    <div class="header clearfix">
 		      <h3 class="text-muted">About you</h3>
 		    </div>
-				<form role="form" name="personal-details">
 				  <div class="form-group">
 				    <label for="email">Email address:</label>
-				    <input type="email" class="form-control" id="email" name="email">
+				    <div data-playback="email"></div>
 				  </div>
 				  <div class="form-group">
 				    <label for="name">Name:</label>
-				    <input type="text" class="form-control" id="name" name="name">
+				    <div data-playback="name"></div>
 				  </div>
 				  <div class="form-group">
 						<label>Do you have any siblings?</label>
 						<br>
-						<label for="siblings-yes"><input type="radio" name="siblings" id="siblings-yes" data-storage="Yes"> Yes</label>
-						<label for="siblings-no"><input type="radio" name="siblings" id="siblings-no" data-storage="No"> No</label>
+						<div data-playback="siblings"></div>
 				  </div>
-				  <a href="playback.html" class="btn btn-default">Submit</a>
-				</form>
+				  <a href="#" class="btn btn-default clear-data">Clear stored information</a>
 			</div>
 		</div>
   </div>
