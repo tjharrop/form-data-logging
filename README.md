@@ -15,7 +15,7 @@ For more detailed instructions use the medium link above. Here's the TLDR versio
 `<script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>`
 
 #### 2. Include the JS from this repo:
-`<script type=”text/javascript” src=”https://cdn.rawgit.com/tjharrop/form-data-logging/master/scripts/form.storage.js”></script>`
+`<script type=”text/javascript” src=”http://tjharrop.github.io/form-data-logging/scripts/form.storage.js”></script>`
 
 #### 3. Give your <input> elements names
 The name should be unique.
